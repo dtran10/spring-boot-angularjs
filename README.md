@@ -40,6 +40,20 @@ cd target
 java -jar ng-spring-boot-1.0.0.jar
 ```
 
+For using Gradle, you can run:
+```
+./gradlew clean build
+```
+or this to ignore running tests:
+```
+./gradlew clean build
+```
+
+Now you can run the Java application with:
+```
+./gradlew bootRun
+```
+
 ## Related articles
 
 - [Rapid prototyping with Spring Boot and AngularJS](http://g00glen00b.be/prototyping-spring-boot-angularjs/)
