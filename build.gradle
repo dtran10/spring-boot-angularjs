@@ -1,29 +1,39 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.3.RELEASE'
-	}
 	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
+jar {
+    baseName = 'demo-app'
+    version = '1.0'
 }
 
+repositories {
+    mavenCentral()
+}
+
+configurations.all {
+    exclude module: 'slf4j-log4j12'
+}
+
+
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile("org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    //Test Dependencies
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
 }
 
 task wrapper(type: Wrapper) {

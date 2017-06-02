@@ -3,6 +3,7 @@ build/
 code/
 lib/
 target/
+bower_components/
 **/.DS_Store
 *.sw?
 .#*
