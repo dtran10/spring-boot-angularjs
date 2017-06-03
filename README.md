@@ -24,6 +24,11 @@ Spring Data JPA allows you to create repositories for your data without even hav
 With Spring Boot you can even leave the configuration behind for configuring Spring Data JPA, so now it's even easier.
 
 ## Installation
+Installation will need Bower so make sure your machine has Node.js and npm install, and then install bower running command:
+```
+npm install -g bower
+```
+
 Installation is quite easy, first you will have to install some front-end dependencies using Bower:
 ```
 bower install
